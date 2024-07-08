@@ -1,8 +1,8 @@
 //Imports
 require('@cypress/xpath')
 
-import {Limit} from "../components/limit";
-import {testDataLimitObject} from "./model";
+import {Limit} from "C:/Users/lubic/Desktop/Cypress/cypress/components/limit";
+import {testDataLimitObject} from "../model";
 
 
 describe("#000001 - Calorie limit functionality", () => {

@@ -1,9 +1,10 @@
-//Imports
-require('@cypress/xpath')
+
+require('@cypress/xpath');
+
 import {Limit} from "../components/limit";
-import {mealFeature } from "../components/meal";
-import { testDataObject } from "./model";
-import {testDataMealValid } from "./model";
+import {mealFeature} from "../components/meal";
+import {testDataObject} from "./model";
+import {testDataMealValid} from "./model";
 
 
 describe('#000003 - Remove meal functionality', ()=>{

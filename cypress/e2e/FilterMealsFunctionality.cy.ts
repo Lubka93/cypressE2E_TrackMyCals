@@ -1,8 +1,8 @@
 //Imports
 require('@cypress/xpath')
-import {mealFeature } from "../components/meal";
-import { testDataObject } from "./model";
-import {testDataMealValid } from "./model";
+import {mealFeature} from "../components/meal";
+import {testDataObject} from "./model";
+import {testDataMealValid} from "./model";
 import {testDataLimitObject} from "./model";
 
 

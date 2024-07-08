@@ -1,5 +1,6 @@
-//Imports
+
 require('@cypress/xpath')
+
 import {testDataLimitObject} from "./model";
 import {workoutComponent } from "../components/workout"; 
 import {testDataWorkoutValid} from "./model";
