@@ -7,30 +7,36 @@
 
 [Test Cases](https://docs.google.com/spreadsheets/d/1ErCFjuApWoE3UCNE7vdVaEBk78zLgv3H/edit?usp=sharing&ouid=112772196783359617351&rtpof=true&sd=true)
 
+## Running Cypress Tests Locally
+
+### Prerequisites
+Ensure you have the following installed on your system:
+- **Node.js** and **npm** (Node Package Manager)
+- **Git**
+
 ### Steps to Clone and Run Tests
-Clone the Repository:
 
-bash
-Copy code
-git clone https://github.com/Lubka93/cypressE2E_TrackMyCals.git
-Navigate to the Project Directory:
+1. **Clone the Repository:**
+    ```bash
+    git clone https://github.com/Lubka93/cypressE2E_TrackMyCals.git
+    ```
 
-bash
-Copy code
-cd cypressE2E_TrackMyCals
-Install Dependencies:
+2. **Navigate to the Project Directory:**
+    ```bash
+    cd cypressE2E_TrackMyCals
+    ```
 
-bash
-Copy code
-npm install
-Run Cypress Tests:
+3. **Install Dependencies:**
+    ```bash
+    npm install
+    ```
 
-To open the Cypress Test Runner:
-bash
-Copy code
-npm run runner
-To run all tests in headless mode:
-bash
-Copy code
-npm run runnerAll
-
+4. **Run Cypress Tests:**
+    - To open the Cypress Test Runner:
+        ```bash
+        npm run runner
+        ```
+    - To run all tests in headless mode:
+        ```bash
+        npm run runnerAll
+        ```
