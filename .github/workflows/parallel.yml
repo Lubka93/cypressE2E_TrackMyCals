@@ -1,28 +1,29 @@
 # This is a basic workflow that is manually triggered
 
-name: Parallel Cypress E2E tests for TrackMyCals
+name: Manual workflow
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
-on: [push]
+on: 
+  push:
+    branches:
+    - main
  
 jobs:
   test:
-    name: Cypress run
-    runs-on: ubuntu-latest
+    name: Test on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
-       # node_version: ['18.x', '20.x']
-      #  os: [ubuntu-latest, windows-latest, macOS-latest]
+        node_version: ['18.x', '20.x']
+        os: [ubuntu-latest, windows-latest, macOS-latest]
         containers: [1,2]
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-
-    - name: Cypress run
-      uses: cypress-io/github-action@v4
+    - uses: actions/checkout@v4
+    - name: Use Node.js ${{ matrix.node_version }}
+      uses: actions/setup-node@v4
       with:
         command: npm run runner-parallel
 
