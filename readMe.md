@@ -7,8 +7,30 @@
 
 [Test Cases](https://docs.google.com/spreadsheets/d/1ErCFjuApWoE3UCNE7vdVaEBk78zLgv3H/edit?usp=sharing&ouid=112772196783359617351&rtpof=true&sd=true)
 
-### For clonning the repository: 
-1. git clone https://github.com/Lubka93/cypressE2E_TrackMyCals.git
-2. Navigate to cd cypressE2E_TrackMyCals
-3. run npm install ()
-4. run npm run runner (cypress open) or npm run runnerAll (cypress run)
+### Steps to Clone and Run Tests
+Clone the Repository:
+
+bash
+Copy code
+git clone https://github.com/Lubka93/cypressE2E_TrackMyCals.git
+Navigate to the Project Directory:
+
+bash
+Copy code
+cd cypressE2E_TrackMyCals
+Install Dependencies:
+
+bash
+Copy code
+npm install
+Run Cypress Tests:
+
+To open the Cypress Test Runner:
+bash
+Copy code
+npm run runner
+To run all tests in headless mode:
+bash
+Copy code
+npm run runnerAll
+
