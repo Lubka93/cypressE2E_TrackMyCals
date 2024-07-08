@@ -27,8 +27,4 @@ jobs:
       with:
         command: npm run runner-parallel
 
-    - name: npm install, build and test
-      run: |
-        npm install
-        npm run build --if-present
-        npm test
+
