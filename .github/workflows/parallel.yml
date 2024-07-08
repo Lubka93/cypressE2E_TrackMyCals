@@ -25,7 +25,7 @@ jobs:
     - name: Use Node.js ${{ matrix.node_version }}
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node_version }}
+        command: npm run runner-parallel
 
     - name: npm install, build and test
       run: |
