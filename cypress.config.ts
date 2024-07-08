@@ -52,8 +52,7 @@ export default defineConfig({
     },
     env: {
       bla: 'Hello from ts config',
-      newPage: 'https://trackmycals.netlify.app/?meal-name=&calorie-number=#',
-      API: 'https://demoqa.com',
+      baseURL: 'https://trackmycals.netlify.app/?meal-name=&calorie-number=#',
       error: 'https://the-internet.herokuapp.com',
       broken: 'https://the-internet.herokuapp.com',
       db:{
