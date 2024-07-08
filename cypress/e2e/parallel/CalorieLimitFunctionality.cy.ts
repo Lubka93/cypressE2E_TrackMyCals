@@ -110,7 +110,7 @@ describe("#000001 - Calorie limit functionality", () => {
   
         cy.get(Limit.remainingCaloriesCard).then((text)=>{
         const text01 = text.text().trim();
-        expect(text01).to.equal('1000')
+        expect(text01).to.equal('2000')
         })
      })
   })
