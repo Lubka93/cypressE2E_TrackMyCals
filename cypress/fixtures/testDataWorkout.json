@@ -1,0 +1,8 @@
+{
+  "workoutValidTestData": "[{\"workout\": \"gym\", \"calories\":\"500\"}, {\"workout\": \"gym\", \"calories\":\"99.5\"},  {\"workout\": \"abcdefghijpppppppppp\", \"calories\":\"500\"},{\"workout\": \"gym\", \"calories\":\"0\"}, {\"workout\": \"gym\", \"calories\":\"+1\"}, {\"workout\": \"100\", \"calories\":\"500\"}, {\"workout\": \"gym@#\", \"calories\":\"500\"} ]",
+  "workoutInvalidTestData": "[{\"workout\": \"\", \"calories\":\"\"}, {\"workout\": \"\", \"calories\":\"500\"}, {\"workout\": \"gym\", \"calories\":\"\"}]",
+  "workoutRemoveValidTestData": "[{\"workout\": \"gym\", \"calories\":\"500\"}, {\"workout\": \"running\", \"calories\":\"200\"}, {\"workout\": \"gym2\", \"calories\":\"0\"}, {\"workout\": \"pilates and running\", \"calories\":\"1000\"}, {\"workout\": \"walk\", \"calories\":\"+1\"}]", 
+  "workoutFilterValidTestData": "[{\"workout\": \"gym\", \"calories\":\"100\"}, {\"workout\": \"running\", \"calories\":\"200\"}, {\"workout\": \"football\", \"calories\":\"500\"}, {\"workout\": \"pilates and running\", \"calories\":\"200\"}, {\"workout\": \"walk\", \"calories\":\"+1\"}]"
+ }
+ 
+

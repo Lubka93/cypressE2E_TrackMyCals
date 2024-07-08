@@ -1,0 +1,6 @@
+{
+ "mealValidTestData": "[{\"meal\": \"sandwich\", \"calories\":\"500\"}, {\"meal\": \"sandwich\", \"calories\":\"49.5\"}, {\"meal\": \"sandwich\", \"calories\":\"0\"}, {\"meal\": \"sandwich\", \"calories\":\"+1\"},  {\"meal\": \"sandwich\", \"calories\":\"99.5\"}, {\"meal\": \"100\", \"calories\":\"500\"},  {\"meal\": \"abcdefghi\", \"calories\":\"500\"}]",
+ "mealInvalidTestData": "[{\"meal\": \"\", \"calories\":\"\"}, {\"meal\": \"\", \"calories\":\"500\"}, {\"meal\": \"sandwich\", \"calories\":\"\"}]",
+ "mealRemoveValidTestData": "[{\"meal\": \"sandwich\", \"calories\":\"100\"}, {\"meal\": \"bread\", \"calories\":\"200\"}, {\"meal\": \"eggs\", \"calories\":\"0\"}, {\"meal\": \"banana bread\", \"calories\":\"1000\"}, {\"meal\": \"salad\", \"calories\":\"1\"}]",
+ "mealFilterTestData": "[{\"meal\": \"sandwich\", \"calories\":\"100\"}, {\"meal\": \"bread\", \"calories\":\"200\"}, {\"meal\": \"eggs\", \"calories\":\"0\"}, {\"meal\": \"banana bread\", \"calories\":\"100\"}, {\"meal\": \"salad\", \"calories\":\"100\"}]"
+}
