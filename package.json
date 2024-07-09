@@ -4,8 +4,9 @@
   "description": "Cypress",
   "main": "index.js",
   "scripts": {
-    "runner": "cypress open --e2e --browser chrome  cypress/e2e/LltrackMyCalsE2E.cy.ts",
-    "runnerAll": "cypress run --browser chrome --headed --spec cypress/e2e/parallel/*.ts --record --key 3688b276-9635-4b7a-8c1d-10fc32844a83"
+    "runner": "cypress open --e2e --browser chrome  cypress/e2e/*.cy.ts",
+    "runnerNotH": "cypress run --browser chrome  --spec cypress/e2e/CalorieLimitFunctionality.cy.ts",
+    "runnerDesc": "cypress run --browser chrome --headed --spec cypress/e2e/CalorieLimitFunctionality.cy.ts --record --key 3688b276-9635-4b7a-8c1d-10fc32844a83"
   },
   "author": "Lubka K",
   "license": "MIT",

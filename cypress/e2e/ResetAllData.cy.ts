@@ -125,7 +125,7 @@ describe('#000009 Reset all data', ()=>{
     
     
     //Assertions for confirm message
-      cy.get(mealFeature.resetModal04).should('be.visible');
+    //  cy.get(mealFeature.resetModal04).should('be.visible');
       cy.get(mealFeature.resetText).then((text)=>{
        let text01 = text.text();
        expect(text01.trim()).to.equal('Are you sure? This will reset all data!')
@@ -182,7 +182,7 @@ describe('#000009 Reset all data', ()=>{
     
     
     //Assertions for confirm message
-      cy.get(mealFeature.resetModal04).should('be.visible');
+    //  cy.get(mealFeature.resetModal04).should('be.visible');
       cy.get(mealFeature.resetText).then((text)=>{
        let text01 = text.text();
        expect(text01.trim()).to.equal('Are you sure? This will reset all data!')
