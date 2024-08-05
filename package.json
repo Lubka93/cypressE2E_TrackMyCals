@@ -7,7 +7,7 @@
     "runner": "cypress open --e2e --browser chrome  cypress/e2e/*.cy.ts",
     "runnerNotH": "cypress run --browser chrome  --spec cypress/e2e/CalorieLimitFunctionality.cy.ts",
     "runnerDesc": "cypress run --browser chrome --headed --spec cypress/e2e/*.cy.ts --record --key 3688b276-9635-4b7a-8c1d-10fc32844a83",
-    "cypress-dash-parallel": "cypress run --browser chrome --record --key f5bb5dd7-49aa-415d-827e-a9bc75ab89a5 --parallel -spec cypress/e2e/parallel/*"
+    "cypress-parallel": "cypress run --browser chrome --record --key f5bb5dd7-49aa-415d-827e-a9bc75ab89a5 --parallel -spec cypress/e2e/parallel/*"
   },
   "author": "Lubka K",
   "license": "MIT",

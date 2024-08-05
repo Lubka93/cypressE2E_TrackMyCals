@@ -23,4 +23,4 @@ jobs:
           record: true
           parallel: true
           group: 'UI-Chrome'
-          start: cypress-dash-parallel
+          start: cypress-parallel
