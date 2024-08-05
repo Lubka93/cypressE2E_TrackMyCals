@@ -5,23 +5,25 @@ on: push
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
- strategy:
-          matrix:
+    strategy:
+      matrix:
         # don't fail the entire matrix on failure
         fail-fast: false
         # run copies of the current job in parallel
         containers: [1, 2, 3]
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # Install npm dependencies, cache them correctly
-      # and run all Cypress tests
-       - name: Setup Node.js
+      
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '14' # or any other version your project requires
+
       - name: Install dependencies
         run: npm install
+
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
