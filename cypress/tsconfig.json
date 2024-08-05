@@ -2,9 +2,9 @@
     "compilerOptions": {
       "target": "es5",
       "lib": ["es5", "dom"],
-      "types": ["cypress", "node","cypress-real-events","cypress-file-upload","cy-verify-downloads","@testing-library/cypress", "@4tw/cypress-drag-drop"]
+      "types": ["cypress", "node","cypress-real-events","cypress-file-upload","cy-verify-downloads","@testing-library/cypress"]
     },
     "include": ["**/*.ts"]
   }
 
-  //"cypress",
+ 
