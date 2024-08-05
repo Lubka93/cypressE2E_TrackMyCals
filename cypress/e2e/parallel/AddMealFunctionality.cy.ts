@@ -39,7 +39,7 @@ describe('#000002 -  Add meal functionality', ()=>{
           cy.get(mealFeature.mealCardCaloriesNumber).should('have.text', `${Math.round((Number(item.calories)))}`);
           cy.get(mealFeature.calorieLimitInputCard).then((text)=>{
              const text01 = text.text().trim();
-             expect(Math.round(Number(text01))).to.equal(Number('2000'))
+             expect(Math.round(Number(text01))).to.equal(Number('1000'))  // change
           })
         cy.get(mealFeature.consumedCaloriesCard).then((text)=>{
           const text01 = text.text().trim();

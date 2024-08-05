@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         # don't fail the entire matrix on failure
-      #  fail-fast: false
+       fail-fast: false
         # run copies of the current job in parallel
         containers: [1, 2, 3]
 
