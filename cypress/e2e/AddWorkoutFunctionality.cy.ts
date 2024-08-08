@@ -89,7 +89,7 @@ describe('#000004 Add workout functionality ', ()=>{
        it('&000034 - Verify  Add workout funtionality  after adding more  than 4  digets into calorie  input', ()=>{
           workoutComponent.addWorkout('gym', '12345');
           
-           //Assertions
+    //Assertions
        cy.get(workoutComponent.workoutCardName).should('have.text', 'gym');
        cy.get(workoutComponent.wokroutCardCaloriesNumber).should('have.text', `${Math.ceil(Number('1234'))}`);
        cy.get(workoutComponent.calorieLimitInputCard).then((text)=>{
@@ -114,7 +114,7 @@ describe('#000004 Add workout functionality ', ()=>{
        it('&000036 - Verify  Add workout funtionality  after adding more characters then is alowed  into workout name  input', ()=>{
              workoutComponent.addWorkout('abcdefghijppppppppppt', '500');
     
-                  //Assertions
+    //Assertions
        cy.get(workoutComponent.workoutCardName).should('have.text', 'abcdefghijpppppppppp');
        cy.get(workoutComponent.wokroutCardCaloriesNumber).should('have.text', `${Math.ceil(Number('500'))}`);
        cy.get(workoutComponent.calorieLimitInputCard).then((text)=>{

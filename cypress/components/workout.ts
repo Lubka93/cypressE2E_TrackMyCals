@@ -13,7 +13,6 @@ class Workout extends MainPage {
 
     addWorkout(meal:string, calories:string) {
        
-
         cy.get(this.openWorkoutButton).click();
 
         if (meal.length === 0 && calories.length === 0) {
@@ -35,9 +34,7 @@ class Workout extends MainPage {
             cy.get(this.workoutInput).type(meal);
             cy.get(this.workoutCaloriesInput).type(calories)
             cy.get(this.setWorkoutButton).click();
-           // cy.reload();
         }
- 
     }
 
     removeSpecificWorkouts(index:number, workoutcards: JQuery<HTMLElement>) {
@@ -45,14 +42,12 @@ class Workout extends MainPage {
             if( i===index) { 
             cy.wrap(workoutCard).find('#item-close-button').click();
        }
-        });
-    }
+        })}
 
     removeAllWorkouts(workoutcards: JQuery<HTMLElement>) {
         workoutcards.each((i, workoutCard) => {
           
             cy.wrap(workoutCard).find('#item-close-button').click();
-       
         });
     }
 

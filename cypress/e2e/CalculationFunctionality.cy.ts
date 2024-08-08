@@ -88,8 +88,8 @@ describe('#000008 Calculation functionality', ()=>{
        let meal = 'sandwitch';
        let calories = '1999'
        mealFeature.addMeal(meal, calories);
-    //Assertions
-    
+   
+   //Assertions
     cy.get(mealFeature.mealCardWrapper).children('div').should('have.length', 1);
     
     cy.get(mealFeature.consumedCaloriesCard).then((text)=>{
@@ -631,7 +631,6 @@ describe('#000008 Calculation functionality', ()=>{
                                         expect(text01.trim()).to.equal('0%')
                                      })
                                      
-                                        })
-       
-    })
+                          })
+               })
     

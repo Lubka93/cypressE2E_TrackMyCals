@@ -81,7 +81,6 @@ describe("#000001 - Calorie limit functionality", () => {
              cy.get(Limit.calorieLimitInputCard).invoke('text').then((text)=>{
               //const text01 = text.text().trim();
               expect(text.trim()).to.equal('12345');
-              cy.log(text)
               });
                
               cy.get(Limit.gainLossCard).invoke('text').then((text)=>{

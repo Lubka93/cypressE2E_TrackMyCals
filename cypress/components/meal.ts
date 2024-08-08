@@ -14,7 +14,6 @@ class MealComponent extends MainPage {
   
 
     addMeal(meal:string, calories:string) {
-       
 
         cy.get(this.openMealButton).click();
 
@@ -37,10 +36,7 @@ class MealComponent extends MainPage {
             cy.get(this.mealInput).type(meal);
             cy.get(this.mealCaloriesInput).type(calories)
             cy.get(this.setMealButton).click();
-           // cy.reload();
-        }
- 
-    }
+        }}
 
 
     removeSpecificMeals(index:number, mealcards: JQuery<HTMLElement>) {

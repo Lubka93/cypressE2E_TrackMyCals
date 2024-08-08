@@ -54,7 +54,6 @@ describe('#000009 Reset all data', ()=>{
     
        let numOfMeals = 4;
        let numberOfWorkouts = 4;
-     
     
        for (let i = 0; i < numOfMeals; i++) { 
        mealFeature.addMeal('sandwich', '500');
@@ -122,9 +121,7 @@ describe('#000009 Reset all data', ()=>{
     
        cy.get(mealFeature.resetButton).click();
     
-    
     //Assertions for confirm message
-    //  cy.get(mealFeature.resetModal04).should('be.visible');
       cy.get(mealFeature.resetText).then((text)=>{
        let text01 = text.text();
        expect(text01.trim()).to.equal('Are you sure? This will reset all data!')
@@ -181,7 +178,6 @@ describe('#000009 Reset all data', ()=>{
     
     
     //Assertions for confirm message
-    //  cy.get(mealFeature.resetModal04).should('be.visible');
       cy.get(mealFeature.resetText).then((text)=>{
        let text01 = text.text();
        expect(text01.trim()).to.equal('Are you sure? This will reset all data!')
@@ -207,8 +203,5 @@ describe('#000009 Reset all data', ()=>{
        let text01 = text.text();
        expect(text01.trim()).to.equal('0%')
     })
-    
     })
-    
-    
     })

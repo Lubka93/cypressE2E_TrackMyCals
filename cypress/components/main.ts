@@ -30,7 +30,6 @@ class MainPage {
       cy.clearAllCookies();
       cy.reload();
    }
- 
 }
 
 export  {MainPage};

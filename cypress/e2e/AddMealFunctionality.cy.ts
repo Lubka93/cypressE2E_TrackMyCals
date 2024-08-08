@@ -78,7 +78,6 @@ describe('#000002 -  Add meal functionality', ()=>{
        expect(alertMessage).to.equal('Fill the input windows!');
      });
  
- 
        testArray.forEach((item)=>{
           mealFeature.clearAllData();
           mealFeature.addMeal(item.meal, item.calories)
@@ -100,12 +99,9 @@ describe('#000002 -  Add meal functionality', ()=>{
              const text01 = text.text().trim();
              expect(text01).equal(`${Math.round(Number(0))}`);
              })
-          cy.get(mealFeature.calorieLimit).should('have.text', '2000');
-        
+          cy.get(mealFeature.calorieLimit).should('have.text', '2000');    
        })
- 
      })
- 
  })
  
  it ('&000018 - Verify Add meal funtionality  after adding negative integer  into calories  input (negative)', ()=>{
@@ -114,12 +110,8 @@ describe('#000002 -  Add meal functionality', ()=>{
      cy.on('window:alert', (alertMessage) => {
        expect(alertMessage).to.equal('Calorie input should be a positive number');
      });
- 
- 
-      
           mealFeature.clearAllData();
           mealFeature.addMeal("sandwitch", "-1");
- 
  
         //Assertions     
           cy.get(mealFeature.calorieLimitInputCard).then((text)=>{
@@ -138,24 +130,18 @@ describe('#000002 -  Add meal functionality', ()=>{
              expect(text01).equal(`${Math.round(Number(0))}`);
              })
           cy.get(mealFeature.calorieLimit).should('have.text', '2000');
- 
  })
  
  
  it ('&000021 - Verify  Add meal funtionality  after adding positive decimal number with comma  into calories  input (negative)', ()=>{
- 
-    
  
      // Set up event listeners for window alert and window confirm events
      cy.on('window:alert', (alertMessage) => {
        expect(alertMessage).to.equal('Calorie input should be a number');
      });
  
- 
-      
           mealFeature.clearAllData();
           mealFeature.addMeal("sandwitch", "99,5");
- 
  
         //Assertions     
           cy.get(mealFeature.calorieLimitInputCard).then((text)=>{
@@ -174,9 +160,7 @@ describe('#000002 -  Add meal functionality', ()=>{
              expect(text01).equal(`${Math.round(Number(0))}`);
              })
           cy.get(mealFeature.calorieLimit).should('have.text', '2000');
- 
  })
- 
  
  it('&000023 - Verify  Add meal funtionality  after adding more  than 4  digets into calorie  input  (positive)', ()=>{
      
@@ -205,7 +189,6 @@ describe('#000002 -  Add meal functionality', ()=>{
           expect(text01).equal(`${Math.round(Number(0))}`);
           })
        cy.get(mealFeature.calorieLimit).should('have.text', '2000');
- 
  })
  
  
@@ -219,13 +202,10 @@ describe('#000002 -  Add meal functionality', ()=>{
          mealFeature.clearAllData();
          mealFeature.addMeal("jhdqudwôoppppp", "500");
  
- 
        //Assertions     
          cy.get(mealFeature.mealCardName).then((mealName)=>{
-          expect(mealName.text()).to.equal('jhdqudwôoppppp');
-         
+          expect(mealName.text()).to.equal('jhdqudwôoppppp');  
          })
- 
  
          cy.get(mealFeature.calorieLimitInputCard).then((text)=>{
           const text01 = text.text().trim();

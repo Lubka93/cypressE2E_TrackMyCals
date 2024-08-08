@@ -3,7 +3,6 @@ export interface TestDataLimit {
   limitTestDataInvalid: string[];
 }
 
-
 export interface testDataLimitObject {
     filterMealItems: string[];
     filterWorkoutItems: string[];
@@ -29,7 +28,6 @@ export interface testDataMealValid {
         mealInvalidTestData: testDataObject[];
         mealRemoveValidTestData: testDataObject[];
         mealFilterTestData: testDataObject[];
-      //  filterItems:string;
 }
 
 export interface testDataWorkoutValid {
