@@ -15,15 +15,12 @@ jobs:
         containers: [1, 2, 3]
 >>>>>>> 86a9319bf9b7d2f182c9222f923fe12cc1931a72
 
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-<<<<<<< HEAD
           start: npm run runnerDesc
-=======
-          start: npm run cypress-parallel
->>>>>>> 86a9319bf9b7d2f182c9222f923fe12cc1931a72
           config-file: cypress.config.ts

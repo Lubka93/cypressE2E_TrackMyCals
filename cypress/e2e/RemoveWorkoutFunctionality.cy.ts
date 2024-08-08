@@ -115,8 +115,6 @@ describe('#000005 Remove workout functionality', ()=>{
        workoutComponent.clearAllData();
        cy.get<testDataWorkoutValid>('@testData').then(function (testData) {
           const testArray:testDataObjectWorkout[] = testData.workoutRemoveValidTestData;
-          
- 
  
           let numberOfRepeat = 1;
           let caloriesOfDeletedCard = 1000;

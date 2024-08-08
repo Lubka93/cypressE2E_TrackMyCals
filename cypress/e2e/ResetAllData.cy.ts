@@ -20,7 +20,6 @@ describe('#000009 Reset all data', ()=>{
     it('&000081 - Verify reset all data functionality when no meal cards and workout cards are added in the app', ()=>{
        cy.get(mealFeature.resetButton).click();
     
-    
     //Assertions for confirm message
       cy.get(mealFeature.resetModal04).should('be.visible');
       cy.get(mealFeature.resetText).then((text)=>{

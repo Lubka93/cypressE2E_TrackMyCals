@@ -125,9 +125,6 @@ describe('#000003 - Remove meal functionality', ()=>{
           })
     
           sumOfCalories = mealCaloriesArr.reduce((acc, current)=> acc+current, 0);
-          cy.log(sumOfCalories)
-          cy.log(sumOfCalories, 'blaa')
-    
     
           //Assertion if meals were added
      cy.get(mealFeature.mealCardWrapper).should('have.length', 5);
