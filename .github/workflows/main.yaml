@@ -4,13 +4,14 @@ on: push
 
 jobs:
   cypress-run:
-    runs-on: ubuntu-22.04
-# strategy:
-    #  matrix:
-        # don't fail the entire matrix on failure
-       #fail-fast: false
-        # run copies of the current job in parallel
-     #   containers: [1, 2, 3] 
+    runs-on: ubuntu-22.04     #windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        container: 
+          - 1
+          - 2
+          - 3
 
     steps:
       - name: Checkout
@@ -18,5 +19,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          start: npm run runnerDesc
+         # start: npm run runnerDesc
+           start: npm run cypress-dash-parallel
           config-file: cypress.config.ts
