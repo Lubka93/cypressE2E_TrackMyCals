@@ -3,6 +3,7 @@ require('@cypress/xpath')
 
 import {Limit} from "../components/limit";
 import {testDataLimitObject} from "./model";
+import { TestDataLimit } from "./model";
 
 
 describe("#000001 - Calorie limit functionality", () => {
@@ -20,8 +21,8 @@ describe("#000001 - Calorie limit functionality", () => {
       
         //Test Data
         //const testData: string[] = ['1800', '180.5', '00001', '12345'];
-      cy.get<testDataLimitObject>('@testData').then((testData)=>{
-           const dataArray:testDataLimitObject[] = JSON.parse(testData.limitTestDataValid);
+      cy.get<TestDataLimit>('@testData').then((testData)=>{
+           const dataArray:string[] = testData.limitTestDataValid;
   
            dataArray.forEach((item)=>{
               Limit.limitUpdate(item);
@@ -48,8 +49,8 @@ describe("#000001 - Calorie limit functionality", () => {
      it('&000005 - &000009 - Verify  Limit calories funtionality after adding an invalid input (negative)', ()=>{
         //const testData:string[] = ['180,5', 'ABC1', '152#', '##', '1 2 3'];
        
-        cy.get<testDataLimitObject>('@testData').then((testData)=>{
-           const dataArray:testDataLimitObject[] = JSON.parse(testData.limitTestDataInvalid)
+        cy.get<TestDataLimit>('@testData').then((testData)=>{
+           const dataArray:string[] = testData.limitTestDataInvalid
   
            dataArray.forEach((item)=>{
               Limit.limitUpdate(item);

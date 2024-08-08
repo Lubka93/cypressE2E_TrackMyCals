@@ -58,7 +58,7 @@ describe('#000005 Remove workout functionality', ()=>{
     it('&000044 - Verify  removing workout  functionality after adding  25 different valid workouts ', ()=>{
        workoutComponent.clearAllData();
        cy.get<testDataWorkoutValid>('@testData').then(function (testData) {
-          const testArray:testDataObjectWorkout[] = JSON.parse(testData.workoutRemoveValidTestData);
+          const testArray:testDataObjectWorkout[] = testData.workoutRemoveValidTestData;
           
  
  
@@ -114,7 +114,7 @@ describe('#000005 Remove workout functionality', ()=>{
     it('&000045 - Verify  filtering meal cards functionality with valid filter input which is the same as one of the meal card  items', ()=>{
        workoutComponent.clearAllData();
        cy.get<testDataWorkoutValid>('@testData').then(function (testData) {
-          const testArray:testDataObjectWorkout[] = JSON.parse(testData.workoutRemoveValidTestData);
+          const testArray:testDataObjectWorkout[] = testData.workoutRemoveValidTestData;
           
  
  

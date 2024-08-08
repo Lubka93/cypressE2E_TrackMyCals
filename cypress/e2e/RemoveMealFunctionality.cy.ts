@@ -66,7 +66,7 @@ describe('#000003 - Remove meal functionality', ()=>{
     
     it ('&000027 - Verify  Remove meal functionality after adding  5 different valid meals (positive)', function () {
        cy.get<testDataMealValid>('@testData').then((testData)=>{
-          const dataArray:testDataObject[] = JSON.parse(testData.mealRemoveValidTestData)
+          const dataArray:testDataObject[] = testData.mealRemoveValidTestData
           mealFeature.clearAllData();
           dataArray.forEach((item:testDataObject)=>{
           mealFeature.addMeal(item.meal, item.calories);
@@ -114,7 +114,8 @@ describe('#000003 - Remove meal functionality', ()=>{
     let sumOfCalories;
     
        cy.get<testDataMealValid>('@testData').then((testData)=>{
-          const dataArray:testDataObject[] = JSON.parse(testData.mealRemoveValidTestData)
+          const dataArray:testDataObject[] = testData.mealRemoveValidTestData;
+
           mealFeature.clearAllData();
           dataArray.forEach((item:testDataObject)=>{
           mealFeature.addMeal(item.meal, item.calories);

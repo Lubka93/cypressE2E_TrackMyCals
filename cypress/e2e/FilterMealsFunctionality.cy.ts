@@ -18,7 +18,7 @@ describe('#000006 Filter meals functionality', ()=>{
  
     it('&000046, &000047, &000048, &000049, &000050,&000052,&000053, &000054 - Verify filtering meal cards functionality with valid filter input which is the same as one of the meal card items', () => {
        cy.get<testDataMealValid>('@testData').then((testData) => {
-           const arrData: testDataObject[] = JSON.parse(testData.mealFilterTestData);
+           const arrData: testDataObject[] = testData.mealFilterTestData;
    
            // Add meal cards
            arrData.forEach((card) => {
@@ -30,9 +30,10 @@ describe('#000006 Filter meals functionality', ()=>{
    
            // Filter meal
            cy.get<testDataLimitObject>('@filterData').then((filterData) => {
-               const filterItemsArr: string[] = JSON.parse(filterData.filterMealsItems);
-               filterItemsArr.forEach((filterItem) => {
-                  
+               const filterItemsArr:string[] = filterData.filterMealItems;
+
+               filterItemsArr.forEach((filterItem:string) => {
+               
                 // Filter meal cards
                    mealFeature.filterMealCards(filterItem);
  
@@ -80,7 +81,7 @@ describe('#000006 Filter meals functionality', ()=>{
    
    it ('&000051 - Verify  filtering meal cards functionality by empty filter input (clicking into filter input window)', ()=>{
     cy.get<testDataMealValid>('@testData').then((testData) => {
-       const arrData: testDataObject[] = JSON.parse(testData.mealFilterTestData);
+       const arrData: testDataObject[] = testData.mealFilterTestData;
  
        // Add meal cards
        arrData.forEach((card) => {

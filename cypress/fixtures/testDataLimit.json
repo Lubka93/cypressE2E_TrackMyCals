@@ -1,4 +1,4 @@
 {
-  "limitTestDataValid": "[\"1800\", \"180.5\", \"00001\", \"12345\"]",
-  "limitTestDataInvalid": "[\"180,5\", \"ABC1\", \"152#\", \"##\", \"1 2 3\"]"
+  "limitTestDataValid": ["1800", "180.5", "00001", "12345"],
+  "limitTestDataInvalid": ["180,5", "ABC1", "152#", "##", "1 2 3"]
 }

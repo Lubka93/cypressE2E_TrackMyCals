@@ -19,7 +19,7 @@ describe('#000007  Filter workouts functionality', ()=>{
  
     it('&000055, &000056, &000057, &000058, &000059,&000061,&000062, &000063 - Verify filtering meal cards functionality with valid filter input which is the same as one of the meal card items', () => {
        cy.get<testDataWorkoutValid>('@testData').then((testData) => {
-           const arrData: testDataObjectWorkout[] = JSON.parse(testData.workoutFilterValidTestData);
+           const arrData: testDataObjectWorkout[] = testData.workoutFilterValidTestData;
    
            // Add meal cards
            arrData.forEach((card) => {
@@ -31,7 +31,9 @@ describe('#000007  Filter workouts functionality', ()=>{
    
            // Filter meal
            cy.get<testDataLimitObject>('@filterData').then((filterData) => {
-               const filterItemsArr: string[] = JSON.parse(filterData.filterWorkoutItems);
+               const filterItemsArr: string[] = filterData.filterWorkoutItems;
+
+
                filterItemsArr.forEach((filterItem) => {
                   
                 // Filter meal cards
@@ -81,7 +83,7 @@ describe('#000007  Filter workouts functionality', ()=>{
    
    it ('&000060 - Verify  filtering meal cards functionality by empty filter input (clicking into filter input window)', ()=>{
     cy.get<testDataWorkoutValid>('@testData').then((testData) => {
-       const arrData: testDataObjectWorkout[] = JSON.parse(testData.workoutFilterValidTestData);
+       const arrData: testDataObjectWorkout[] = testData.workoutFilterValidTestData;
  
        // Add meal cards
        arrData.forEach((card) => {

@@ -58,11 +58,11 @@ class MealComponent extends MainPage {
     }
 
     filterMealCards(mealName:string) {
-        cy.get(mealFeature.filterInput).type(mealName)
+        cy.get(this.filterInput).type(mealName)
     }
 
     clearFilterInput():void {
-        cy.get(mealFeature.filterInput).clear();
+        cy.get(this.filterInput).clear();
     }
 
 }
