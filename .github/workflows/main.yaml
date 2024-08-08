@@ -4,7 +4,7 @@ on: push
 
 jobs:
   cypress-run:
-    runs-on: ubuntu-22.04  # Change to windows-latest if needed
+    runs-on: windows-latest         #ubuntu-22.04   windows-latest 
     strategy:
       fail-fast: false
       matrix:
@@ -17,5 +17,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          start: npm run cypress-dash-parallel  # Corrected indentation
+          start: npm run cypress-dash-parallel  
           config-file: cypress.config.ts
