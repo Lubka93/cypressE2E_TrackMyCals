@@ -11,7 +11,7 @@ export interface testDataLimitObject {
 
 export interface testDataLimitObject {
     limitTestDataValid: string[];
-    limitTestDataInvalid: string;
+    limitTestDataInvalid: string[];
 }
 
 export interface testDataObject {
@@ -25,11 +25,11 @@ export interface testDataObjectWorkout {
 }
 
 export interface testDataMealValid {
-        mealValidTestData: string;
-        mealInvalidTestData: string;
+        mealValidTestData: testDataObject[];
+        mealInvalidTestData: testDataObject[];
         mealRemoveValidTestData: testDataObject[];
         mealFilterTestData: testDataObject[];
-        filterItems:string;
+      //  filterItems:string;
 }
 
 export interface testDataWorkoutValid {

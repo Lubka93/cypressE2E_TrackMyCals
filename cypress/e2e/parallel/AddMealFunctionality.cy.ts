@@ -23,7 +23,7 @@ describe('#000002 -  Add meal functionality', ()=>{
     it('&000012; &000013; &000017; &000019; &000020; &000022, &000025 - Verify  Add meal funtionality after adding valid name and valid calories for the meal (positive)', ()=>{
       
      cy.get<testDataMealValid>('@testData').then((testData)=>{
-       const testArray:testDataObject[] = JSON.parse(testData.mealValidTestData);
+       const testArray:testDataObject[] = testData.mealValidTestData;
  
        testArray.forEach((item)=>{
           mealFeature.clearAllData();
@@ -66,7 +66,7 @@ describe('#000002 -  Add meal functionality', ()=>{
  it ('&000014; &000015; &000016 - Verify  Add meal funtionality  after adding none input (negative)', ()=>{
  
     cy.get<testDataMealValid>('@testData').then((testData)=>{
-       const testArray:testDataObject[] = JSON.parse(testData.mealInvalidTestData);
+       const testArray:testDataObject[] = testData.mealInvalidTestData;
  
     
      // Set up event listeners for window alert and window confirm events

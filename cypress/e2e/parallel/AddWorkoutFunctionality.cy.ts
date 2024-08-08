@@ -22,7 +22,7 @@ describe('#000004 Add workout functionality ', ()=>{
        it('&000029, &000030, &000035, &000037, &000041, &000042 - Verify  add workout funtionality after adding valid workout name and valid calories for burned calories input (positive)', ()=>{
        
           cy.get<testDataWorkoutValid>('@testData').then((testData)=>{
-             const testArray:testDataObjectWorkout[] = JSON.parse(testData.workoutValidTestData);
+             const testArray:testDataObjectWorkout[] = testData.workoutValidTestData;
     
        testArray.forEach((item) => {
           workoutComponent.addWorkout(item.workout, item.calories);
@@ -54,7 +54,7 @@ describe('#000004 Add workout functionality ', ()=>{
        
        it('&000031, &000032, &000033 - Verify  add workout funtionality  after adding none input into workout name input and/or none input for burned calories (negative)', ()=>{
           cy.get<testDataWorkoutValid>('@testData').then((testData)=>{
-             const testArray:testDataObjectWorkout[] = JSON.parse(testData.workoutInvalidTestData);
+             const testArray:testDataObjectWorkout[] = testData.workoutInvalidTestData;
     
        testArray.forEach((item) => {
           workoutComponent.addWorkout(item.workout, item.calories);

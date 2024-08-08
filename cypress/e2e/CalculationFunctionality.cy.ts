@@ -11,8 +11,6 @@ describe('#000008 Calculation functionality', ()=>{
        mealFeature.visit();
        mealFeature.clearAllData();
     
-       cy.fixture('testDataLimit.json').as('testData');
-    
         //Assertions
         cy.url().should('eq', 'https://trackmycals.netlify.app/?meal-name=&calorie-number=#' );
         cy.title().should('eq', 'TrackMyCals');
