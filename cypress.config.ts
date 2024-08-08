@@ -1,21 +1,24 @@
 import { defineConfig } from "cypress";
+//Import for faker
+import {faker} from "@faker-js/faker";
+
 //verify download import
-const {verifyDownloadTasks } = require('cy-verify-downloads');
+import { verifyDownloadTasks } from 'cy-verify-downloads';
 
 //Excel stuff which we need if I want to integrate it  //integrated library
 const xlsx = require("node-xlsx").default;
-const fs = require("fs"); // for file
-const path = require("path"); //for file path
+import fs from "fs"; // for file
+import path from "path"; //for file path
 
 //MySQL library declaration
 //const mysql = require("mysql");
- const mysql = require('mysql2')
+ import mysql from 'mysql2';
 
 
 export default defineConfig({
   retries: {            // for flaky tests .. based on the run/open mode it will GLOBALLY try to run test 2 or 3 times
-    runMode: 0,
-    openMode:3,
+    runMode: 2,
+    openMode:2,
   },
   e2e: {
    // baseUrl: "http://www.uitestingplayground.com",
