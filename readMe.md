@@ -1,7 +1,8 @@
 ## E2E Cypress tests for TrackMyCals app
 
 #### Tests are written in TypeScript
-
+#### Tests are written for my webapp TrackMyCals which is deployed using Netlify services (link below)
+[TrackMyCals link](https://trackmycals.netlify.app)
 
 #### Tests are written based on the test cases (link below)
 
@@ -34,7 +35,7 @@ Ensure you have the following installed on your system:
 4. **Run Cypress Tests:**
     - To open the Cypress Test Runner:
         ```bash
-        npm run runner
+        npm run open
         ```
     - To run all tests in headless mode:
         ```bash

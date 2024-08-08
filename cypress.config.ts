@@ -1,6 +1,4 @@
 import { defineConfig } from "cypress";
-//Import for faker
-import {faker} from "@faker-js/faker";
 
 //verify download import
 import { verifyDownloadTasks } from 'cy-verify-downloads';
@@ -81,8 +79,8 @@ export default defineConfig({
     inlineAssets: true,
     saveAllAttempts: false,
   },
-  video:false,       //for automatic sceenshots
-  screenshotOnRunFailure:false,      //for automatic videos
+  video: true,       //for automatic sceenshots
+  screenshotOnRunFailure: true,      //for automatic videos
 });
 
 
