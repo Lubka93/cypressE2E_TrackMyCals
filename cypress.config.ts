@@ -64,7 +64,7 @@ export default defineConfig({
         port: 3307,
       },
     },
-    projectId: "uenrzx",
+    projectId: "isbpgt",
    // specPattern: 'cypress/e2e/**/*.cy.ts',
   },
  
